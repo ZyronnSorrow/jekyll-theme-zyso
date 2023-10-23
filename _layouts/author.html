@@ -1,0 +1,23 @@
+---
+layout: default
+parent_url: /authors
+---
+
+<div>
+  <h1>{{ page.name }}</h1>
+  <h2>{{ page.position }}</h2>
+  {{ content }}
+  {% assign filtered_posts = site.posts | where: 'author', page.name | sort: 'title' %}
+  <h2>Posts</h2>
+  {% if filtered_posts.size > 0 %}
+    <ul>
+      {% for post in filtered_posts %}
+        <li>
+          <a href="{{ post.url }}">{{ post.post_title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>This author has not written any posts yet.</p>
+  {% endif %}
+</div>

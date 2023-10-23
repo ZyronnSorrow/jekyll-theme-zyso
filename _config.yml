@@ -1,0 +1,50 @@
+title: ZySo Theme- TODO (override title in project-specific _config.yml)
+
+author:
+  name: ZyronnSorrow
+  email: zyronn.sorrow@gmail.com
+
+description: >-
+  This is the base theme for all websites/documentation for ZyronnSorrow's projects. TODO (override this description)
+
+# Build Settings
+theme: jekyll-theme-zyso
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections_dir: collections
+collections:
+  authors:
+    output: true
+    permalink: /:collection/:name
+  posts:
+    permalink: /blog/:categories/:title
+
+# Layout Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Other Settings - can be overriden in project-specific _config.yml
+timezone: America/Denver
+strict_front_matter: true
+
+# Includes
+include:
+  - _pages
