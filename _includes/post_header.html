@@ -1,0 +1,12 @@
+<h1>{{ page.post_title }}</h1>
+<p>
+  {% assign author = site.authors | where: 'name', page.author | first -%}
+
+  {% if author %}
+    Written by: <a href="{{ author.url }}">{{ author.name }}</a> on {{ page.date | date_to_long_string: "ordinal", "US" }}
+  {% endif %}
+</p>
+
+{% if page.updated %}
+  <p class="italic">Updated: {{ page.updated | date_to_long_string: "ordinal", "US" }}</p>
+{% endif %}

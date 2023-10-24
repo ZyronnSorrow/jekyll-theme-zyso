@@ -6,7 +6,13 @@ parent_url: /authors
 <div>
   <h1>{{ page.name }}</h1>
   <h2>{{ page.position }}</h2>
-  {{ content }}
+</div>
+
+<div>
+  {{ content -}}
+</div>
+
+<div>
   {% assign filtered_posts = site.posts | where: 'author', page.name | sort: 'title' %}
   <h2>Posts</h2>
   {% if filtered_posts.size > 0 %}
