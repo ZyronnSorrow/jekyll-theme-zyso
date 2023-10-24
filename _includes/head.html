@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+
+{% if page.title_override %}
+  <title>{{ page.title_override }}</title>
+{% else %}
+  {% if page.title %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+  {% else %}
+    <title>{{ site.title }}</title>
+  {% endif %}
+{% endif %}
+
+<link rel="stylesheet" href="{{ page.styles_path }}">
+
+{% if page.feed_enabled %}
+  {% feed_meta %}
+{% endif -%}
+
+{% if page.seo_enabled %}
+  {% seo %}
+{% endif -%}
+
+{% include head_custom.html -%}

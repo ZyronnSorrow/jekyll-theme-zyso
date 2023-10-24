@@ -1,7 +1,7 @@
-title: ZySo Theme- TODO (override title in project-specific _config.yml)
+title: Jekyll ZySo Theme- TODO (override title in project-specific _config.yml)
 
 author:
-  name: ZyronnSorrow
+  name: Kevin Moore
   email: zyronn.sorrow@gmail.com
 
 description: >-
@@ -24,7 +24,7 @@ collections:
   posts:
     permalink: /blog/:categories/:title
 
-# Layout Defaults
+# Layout & Front Matter Defaults
 defaults:
   - scope:
       path: ""
@@ -33,13 +33,23 @@ defaults:
       layout: "author"
   - scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
   - scope:
       path: ""
     values:
-      layout: "default"
+      header_enabled: true
+      page_header: "TODO: Update page_header value in this page's front matter"
+      footer_enabled: true
+      styles_path: /assets/css/styles.css
+      feed_enabled: true
+      seo_enabled: true
 
 # Other Settings - can be overriden in project-specific _config.yml
 timezone: America/Denver
