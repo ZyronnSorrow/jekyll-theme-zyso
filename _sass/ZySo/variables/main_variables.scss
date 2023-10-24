@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+$spacing-unit: 30px !default;
+$spacing-unit-mobile: $spacing-unit / 2;
+$table-text-align: left !default;
+$content-width: 800px !default;
+$content-width-mobile: 600px !default;
+$screen-width-mobile: 600px !default;
+$screen-width: 800px !default;
+
+@import
+  "ZySo/mixins/base.scss",
+  "ZySo/mixins/custom_mixins.scss",
+  "ZySo/variables/base/font_variables.scss",
+  "ZySo/variables/custom/custom_variables.scss",
+  "ZySo/styles/base/reset.scss",
+  "ZySo/styles/base/layout.scss",
+  "ZySo/styles/custom/custom_styles.scss";
